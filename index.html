@@ -1,119 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css"/>
-    <title>Best trips - Visit new worlds</title>
-</head>
-<body>
-    <header>
-        <logo>
-
-        </logo>
-        <h1>
-            Best trips
-    
-        </h1>
-        <h2>
-            Visit new words
-    
-        </h2>
+    <title>Best trips - Visit amazing places</title>
+ </head>
+ <body>
+    <header class="page-header">
+        <h1>Best trips</h1>
+        <h2>Visit amazing worlds</h2>
     </header>
-    
 
-    <nav role="navigation">
+    <nav>
         <ul>
-            <li>
-                <a href="index.html">Home</a>
-                <a href="bestdestinations.html">Best Destinations</a>
-                <a href="tickets.html">Tickets</a>
-                <a href="contact.html">Contact</a>
-   
-           </li>
-
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="bestdestinations.html">Best Destinations</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-        
-         
     </nav>
 
-    <main role="main">
-         <!--Movie aboout travelling < 50mb-->
-         <video width="320" height="240" controls>
-            <source src="Travel.mp4" type="video/mp4">
-            <source src="Travel.ogg" type="video/ogg">
-         </video>    
-                  
-        <article id="product1">
-            <!--Photo floating to the left-->
-            <h3>Toscana - Italy<!--first destination--></h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veritatis quisquam, deserunt tenetur, placeat impedit officia repellendus fuga commodi molestiae dolor unde id, quia aperiam dignissimos praesentium voluptatibus ex aut.
-
-            </p>
-
-        </article>
-
-        <article id="product2">
-            <!--Photo floating to the left-->
-            <h3>Yucatan - Mexico<!--second destination--></h3>
-            <p>
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veritatis quisquam, deserunt tenetur, placeat impedit officia repellendus fuga commodi molestiae dolor unde id, quia aperiam dignissimos praesentium voluptatibus ex aut.
-
-            </p>
-        </article>
-
-        <article id="product3">
-            <!--Photo floating to the left-->
-            <h3>Dubai - UAE<!--third destination--></h3>
-            <p>
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veritatis quisquam, deserunt tenetur, placeat impedit officia repellendus fuga commodi molestiae dolor unde id, quia aperiam dignissimos praesentium voluptatibus ex aut.
-
-            </p>
-         </article>
-
+    <!-- Hamburger menu -->
+    <section class="menu-wrapper">
+        <header class="burger-header">
+         <!-- <a href="#home" class="logo">Codeconvey</a> -->
+         <input class="menu-btn" type="checkbox" id="menu-btn" />
+         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+         <ul class="menu">
+           <li><a href="bestdestinations.html">Best Destinations</a></li>
+           <li><a href="tickets.html">Tickets</a></li>
+           <li><a href="contact.html">Contact</a></li>
+         </ul>
+       </header>
+    </section>
+    <!-- End of hamburger menu-->
+    
+     <!--Movie aboout travelling < 50mb-->
+     <video class="video" width="1375" height="440" autoplay loop muted>
+        <source src="Video_20mb.mp4" type="video/mp4">
+        <source src="Video_20mb-Copy.ogg" type="video/ogg">
+    </video> 
         
-        <aside class="container">
-            <ol>
+    <main class="flex-container">
+         
+        <section>
+            <article id="product1" class="index_article">
+                <h3>Tuscany - Italy</h3>
+                    <img src="firenze.jpg" width="250" height="150" alt="Firenze view"/><!--Photo floating to the right-->
+                    <p class="content-wraper">
+                        Cities bursting with priceless art! Florence, Lucca, and Siena fit the bill. Spectacular hill towns with gentle rhythms and sweet piazzas! Bagno Vignoni, Monteriggioni and Massa Marittima are only the start of a list of villages that will steal your heart. Restaurants exemplify the Italian-invented slow food movement, and eating alongside a Brunello or Super Tuscan wine is a wonderful education in the ingredients of this fertile area. The mix of natural beauty and manmade pleasures makes it clear why Tuscany is Italy’s most compelling destination – and a repeat visitor’s dream.
+                        <a href="https://www.tui.nl/vliegtickets/">order product</a></p>
+            </article>
+    
+            <article id="product2" class="index_article">
+                <h3>Yucatan - Mexico</h3>
+                    <img src="yucatan.jpg" width="250" height="150" alt="Yucatan pyramid"/> <!--Photo floating to the right-->
+                    <p class="content-wraper">
+                        The Yucatan Peninsula is one of the most culturally and ecologically rich regions in the world. A vast variety of flora and fauna can be found in the biosphere reserves, the lakes and the coral reefs, while Mexico’s Mesoamerican culture is present in the abundance of archeological sites ripe for exploration. Vibrant colonial cities are dotted throughout the peninsula and whether you are searching for beautiful white-sand beaches to relax on or seeking out thrilling adventure, there is nowhere quite like the Yucatan Peninsula.
+                        <a href="https://www.tui.nl/vliegtickets/">order product</a></p>
+                </article>
+    
+            <article id="product3" class="index_article">
+                <h3>Dubai - UAE</h3>
+                    <img src="dubai.jpg" width="250" height="150" alt="Dubai view"/> <!--Photo floating to the right-->
+                    <p class="content-wraper">
+                        Dubai has sprouted up from its desert port beginnings to become a sprawling metropolis full of vibrant neighborhoods, record-setting buildings, and over-the-top shopping centers. A place full of contrasts. Glittering skyline, made up of skyscrapers so tall they defy imagination; the luxurious hotels and then there's the desert with its rolling hills of sand stamped with the footprints of Arabian oryx and gazelles; the souks with their labyrinth of stalls, bins overflowing with a rainbow of spices; and the traditional abra boats ferrying riders across the Dubai Creek.
+                        <a href="https://www.tui.nl/vliegtickets/">order product</a></p>
+            </article>
+        </section>
+            
 
-                <h3>5 upcoming routes</h3>
-                    <h4>1. Scandinavia</h4>
-                        <p>
-                             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        </p>
-                    <h4>2. Costa Rica</h4>
-                        <p>
-                             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        </p>
-                    <h4>3. Singapore</h4>
-                        <p>
-                             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        </p>
-                    <h4>4. Greece</h4>
-                        <p>
-                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        </p>
-                    <h4>5. Kenya & Tanzania</h4>
-                        <p>
-                             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        </p>
-                
-            </ol>
+        <aside class="container">
+            <h3>Best destinations 2022</h3>
+                <ol >
+                    <li class="list">Scandinavia<p>Experience the natural wonders in peaceful reflection.</p></li>
+                    <li class="list">Costa Rica<p>An unspoiled tropical paradise.</p></li>
+                    <li class="list">Greece<p>The land that was once loved by the Greek gods.</p></li>
+                    <li class="list">Singapore<p>A melting pot of art.</p></li>
+                    <li class="list">Kenya & Tanzania<p>A wild adventure in Africa</p></li>
+                </ol>
         </aside>
 
     </main>
 
-    <footer role="contentinfo">
-        <p>
-            &copy; 2021 Achilleas Ballanos
-        </p>
+ </body>
 
-    </footer>
+ <footer>
+    <p class="copyright">
+        &copy; 2021 Achilleas Ballanos
+    </p>
+    <p class="cookie_statement">
+        We use cookies to enhance your experience!
+    </p>
 
+</footer>
 
-
-
-</body>
 </html>
