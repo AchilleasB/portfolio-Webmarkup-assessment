@@ -4,7 +4,7 @@
   scrollbar-width: none; /* for Firefox */
 }
 body {
-  font-family: "Poppins";
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo {
@@ -75,7 +75,7 @@ a:hover {
 }
 
 .burger-header .logo {
-  color: #fff;
+  color: #ffffff;
   display: block;
   float: left;
   font-size: 1.5em;
@@ -85,7 +85,7 @@ a:hover {
 
 .burger-header li a:hover,
 .burger-header .menu-btn:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #1c1c1c;
 }
 
 .burger-header .menu {
@@ -120,7 +120,7 @@ a:hover {
 }
 
 .burger-header .menu-icon .navicon {
-  background: #fff;
+  background: #ffffff;
   display: block;
   height: 2px;
   position: relative;
@@ -201,11 +201,20 @@ aside.container {
 }
 
 aside.container > ol {
+  font-family: "Notable";
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  word-spacing: 2px;
+  text-indent: 5px;
   padding: 0;
+}
+.title-color {
+  color: #07151b;
+  text-transform: uppercase;
 }
 
 .index_article {
-  width: 75%;
+  width: 100%;
   padding-left: 2em;
 }
 
@@ -224,7 +233,10 @@ aside.container > ol {
 }
 
 .article_content_wrapper > section.content > p {
-  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  word-spacing: 3px;
+  text-indent: 2px;
 }
 
 aside.container {
@@ -256,6 +268,7 @@ footer {
   color: #fff;
   background-color: #fa0;
   opacity: 0.5;
+  z-index: 9999;
 }
 
 /* End of index page */
@@ -310,10 +323,17 @@ footer {
   margin: 0%;
 }
 .grid-container > article {
-  background-color: #fefedd;
   text-align: left;
   padding: 20px;
-  font-size: 13px;
+  font-size: 20px;
+  border-color: #8afff0;
+  border-style: double;
+  border-width: 10px;
+  letter-spacing: 0.8px;
+  line-height: 2;
+  word-spacing: 4px;
+  text-indent: 3px;
+  background-color: #fbffda;
 }
 
 .grid-container > figure {
@@ -342,6 +362,7 @@ footer {
 /* page tickets */
 
 main.tickets {
+  width: 100%;
   flex-direction: column;
   display: flex;
 }
@@ -359,10 +380,12 @@ main.tickets {
 
 .tickets_table {
   width: 100%;
-  height: 10em;
+  height: 5em;
 }
 
 .table_wrapper {
+  padding-left: 50px;
+  padding-top: 50px;
   width: 75%;
 }
 
@@ -378,13 +401,8 @@ main.tickets {
   flex-direction: column;
 }
 
-.tickets_aside > span {
-  text-align: center;
-  height: 5em;
-  display: inline;
-  line-height: 5em;
-  border: 1px solid;
-  margin: 0.2em 0;
+.tickets_aside > img {
+  max-height: 30px;
 }
 
 .tickets_product1 {
@@ -402,7 +420,8 @@ main.tickets {
 /*
   Contact page
 */
-main.contact {
+.main_contact {
+  width: 100%;
   flex-direction: column;
   display: flex;
 }
@@ -454,17 +473,12 @@ input[type="submit"]:hover {
   float: right;
   display: flex;
   flex-direction: column;
-  padding-top: 0.5em;
-  padding-right: 0.1em;
+  padding-top: 20px;
+  padding-left: 40px;
 }
 
-.contact_aside > span {
-  text-align: center;
-  height: 5em;
-  display: inline;
-  line-height: 5em;
-  border: 1px solid;
-  margin: 0.2em 0;
+.contact_aside > img {
+  max-height: 30px;
 }
 
 .contact_product1 {
@@ -543,11 +557,49 @@ input[type="submit"]:hover {
     margin-top: 2em;
   }
 
-  /* page best items, tablet version */
+  /* page best destinations, tablet version */
 
+  article.item4,
+  aside.product3 {
+    display: none;
+  }
+
+  .grid-container {
+    grid-template-areas:
+      "article1 article1 article1 article2 article2 article2"
+      "article1 article1 article1 article2 article2 article2"
+      "article3 article3 article3 article2 article2 article2"
+      "article3 article3 article3 article5 article5 article5"
+      "article3 article3 article3 article5 article5 article5"
+      "article3 article3 article3 article5 article5 article5"
+      "article6 article6 article6 article6 article6 article6"
+      "article6 article6 article6 article6 article6 article6"
+      "aside1 aside1 aside1 aside2 aside2 aside2";
+  }
   /* page tickets, tablet version */
+  .tickets_content_wrapper {
+    display: unset;
+  }
+
+  .tickets_product1 {
+    display: none;
+  }
+
+  .tickets_aside {
+    width: 100%;
+    flex-direction: unset;
+  }
+
+  .tickets_aside > span {
+    width: 50%;
+  }
+  /* end of page tickets */
 
   /* page contact, tablet version */
+
+  footer {
+    margin-top: 2em;
+  }
 }
 
 /*
@@ -555,17 +607,21 @@ input[type="submit"]:hover {
 */
 @media only screen and (max-width: 480px) {
   body {
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
   }
 
   /*
-        Index page
+        Index page, mobile version
     */
+  .main {
+    margin: 0px;
+  }
   video {
     display: none;
   }
 
   .index_article {
+    width: 100%;
     padding: 0 0.8em;
   }
 
@@ -591,53 +647,49 @@ input[type="submit"]:hover {
     */
 
   /*
-        destinations Page
+        destinations page, mobile version
     */
-  #item5 {
-    order: 1;
+  aside > img {
+    margin: auto;
+    width: 50%;
+    display: table;
   }
 
-  #item3 {
-    order: 2;
-  }
-
-  #item2 {
-    order: 3;
-  }
-
-  #item1 {
-    order: 4;
-  }
-
-  #item5,
-  #item3,
-  #item2,
-  #item1 {
-    width: 66%;
-    margin-left: 0;
-  }
-
-  #item4,
-  #item6 {
+  article.item4,
+  article.item6 {
     display: none;
   }
 
-  .product1 {
-    width: 66%;
+  aside.product3 {
+    display: block;
   }
-  .product2 {
-    width: 66%;
-  }
-  .product3 {
-    width: 66%;
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(5.36em, 1fr));
+    grid-template-areas:
+      "article5 article5 article5 article5 article5 article5"
+      "article5 article5 article5 article5 article5 article5"
+      "article5 article5 article5 article5 article5 article5"
+      "article3 article3 article3 article3 article3 article3"
+      "article3 article3 article3 article3 article3 article3"
+      "article3 article3 article3 article3 article3 article3"
+      "article2 article2 article2 article2 article2 article2"
+      "article2 article2 article2 article2 article2 article2"
+      "article2 article2 article2 article2 article2 article2"
+      "article1 article1 article1 article1 article1 article1"
+      "article1 article1 article1 article1 article1 article1"
+      "article1 article1 article1 article1 article1 article1"
+      "aside1 aside1 aside1 aside1 aside1 aside1"
+      "aside2 aside2 aside2 aside2 aside2 aside2"
+      "aside3 aside3 aside3 aside3 aside3 aside3";
   }
 
   /*
-        End of items page
+        End of destinations page
     */
 
   /*
-        Tickets page
+        Tickets page, mobile version
     */
   .tickets_aside {
     flex-direction: column;
@@ -650,9 +702,7 @@ input[type="submit"]:hover {
   .tickets_product1 {
     display: unset;
   }
-  /*
-        End of tickets page
-    */
+  /* End of tickets page */
 
   footer {
     margin-top: 1em;
